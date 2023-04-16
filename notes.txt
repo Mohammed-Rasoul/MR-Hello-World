@@ -1,0 +1,36 @@
+1-2
+
+---
+catkin_create_pkg hello_world rospy
+---
+
+---
+#! /usr/bin/python
+
+import rospy    # Import Python lib for ROS
+rospy.init_node('printer_node')     # Init a node
+print '\n\n HELLO WORLD - ROS\n\n'  # Print the message
+---
+
+---
+rosrun hello_world printer.py
+roslaunch hello_world node_launcher.launch
+---
+
+
+1-3
+
+---
+<launch>
+  <node pkg="hello_world" type="publisher.py" name="topic_publisher" output="screen">
+  </node>
+  <node pkg="hello_world" type="subscriber.py" name="topic_subscriber" output="screen">
+  </node>
+</launch>
+---
+
+---
+catkin_make
+roslaunch hello_world pubsub_launcher.launch
+---
+

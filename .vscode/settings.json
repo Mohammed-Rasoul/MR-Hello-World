@@ -1,0 +1,10 @@
+{
+  "ros.distro": "kinetic",
+  "python.autoComplete.extraPaths": [
+    "/opt/ros/kinetic/lib/python2.7/dist-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/opt/ros/kinetic/lib/python2.7/dist-packages"
+  ],
+  "cmake.configureOnOpen": false
+}
